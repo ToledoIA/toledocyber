@@ -6,10 +6,12 @@
 <title>Assessment CTEM — Toledo Cyber.Consulting</title>
 <meta name="description" content="Avalie a maturidade do seu programa de gestão contínua de exposição a ameaças. Diagnóstico gratuito em 5 minutos.">
 <meta property="og:title" content="Assessment de Maturidade CTEM — Toledo Cyber.Consulting">
-<meta property="og:description" content="Descubra o nível de maturidade do seu programa de segurança em 15 perguntas. Proposta de evolução personalizada por Toledo Cyber.Consulting."  />
+<meta property="og:description" content="Descubra o nível de maturidade do seu programa de segurança em 15 perguntas. Proposta personalizada por Toledo Cyber.Consulting.">
 <meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --blue:#1A5FA8;--blue-d:#0E3F72;--blue-l:#E8F1FB;--blue-m:#B5D4F4;
@@ -25,7 +27,7 @@
 html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,sans-serif;font-size:15px;color:var(--gray-7);background:var(--gray-0);line-height:1.6;min-height:100vh}
 
-/* ── NAV ── */
+/* NAV */
 nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
 .nav-brand{display:flex;align-items:center;gap:10px}
 .nav-mark{width:32px;height:32px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center}
@@ -34,7 +36,7 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
 .nav-name span{color:var(--orange)}
 .nav-badge{font-size:11px;font-weight:500;background:var(--blue-l);color:var(--blue);padding:3px 10px;border-radius:20px}
 
-/* ── HERO ── */
+/* HERO */
 .hero{background:var(--blue-d);padding:64px 24px 56px;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;left:-100px;top:-100px;width:400px;height:400px;border-radius:50%;border:80px solid rgba(232,98,26,.08);pointer-events:none}
 .hero::after{content:'';position:absolute;right:-80px;bottom:-120px;width:360px;height:360px;border-radius:50%;border:60px solid rgba(255,255,255,.04);pointer-events:none}
@@ -46,21 +48,21 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
 .h-stat .val{font-size:28px;font-weight:700;color:var(--white);line-height:1}
 .h-stat .lbl{font-size:11px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
 
-/* ── WRAPPER ── */
+/* WRAP */
 .wrap{max-width:720px;margin:0 auto;padding:40px 20px}
 
-/* ── PROGRESS ── */
+/* PROGRESS */
 .progress-wrap{margin-bottom:28px}
-.progress-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.progress-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:8px}
 .progress-top .p-label{font-size:13px;color:var(--gray-4)}
-.progress-top .p-phases{display:flex;gap:6px}
+.progress-top .p-phases{display:flex;gap:6px;flex-wrap:wrap}
 .p-phase{font-size:11px;padding:2px 8px;border-radius:20px;border:1px solid var(--gray-1);color:var(--gray-4);transition:all .2s}
 .p-phase.active{background:var(--blue);color:var(--white);border-color:var(--blue)}
 .p-phase.done{border-color:var(--green);color:var(--green)}
 .progress-track{height:4px;background:var(--gray-1);border-radius:2px;overflow:hidden}
 .progress-fill{height:100%;background:var(--blue);border-radius:2px;transition:width .4s ease}
 
-/* ── QUESTION CARD ── */
+/* QUESTION */
 .q-card{background:var(--white);border:1px solid var(--gray-1);border-radius:var(--radius);padding:28px;margin-bottom:16px}
 .q-meta{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);margin-bottom:10px}
 .q-text{font-size:17px;font-weight:500;color:var(--gray-7);line-height:1.45;margin-bottom:20px}
@@ -72,7 +74,7 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
 .opt.selected .opt-num{background:var(--blue);color:var(--white)}
 .opt-text{font-size:14px;color:var(--gray-6);line-height:1.45}
 
-/* ── NAV BUTTONS ── */
+/* BUTTONS */
 .btn-row{display:flex;justify-content:space-between;align-items:center;margin-top:4px}
 .btn{padding:10px 24px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;cursor:pointer;transition:all .15s;border:none;font-family:inherit}
 .btn-primary{background:var(--blue);color:var(--white)}
@@ -80,10 +82,8 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
 .btn-primary:disabled{opacity:.4;cursor:default}
 .btn-ghost{background:transparent;color:var(--gray-4);border:1px solid var(--gray-1)}
 .btn-ghost:hover{background:var(--gray-0)}
-.btn-orange{background:var(--orange);color:var(--white)}
-.btn-orange:hover{background:#c9541a}
 
-/* ── SCORE RESULT ── */
+/* SCORE */
 .score-view{text-align:center;padding:8px 0 32px}
 .score-ring{width:120px;height:120px;border-radius:50%;border:4px solid var(--amber);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 16px}
 .score-ring .s-num{font-size:36px;font-weight:700;color:var(--amber);line-height:1}
@@ -94,25 +94,23 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
 .lbar{width:48px;height:6px;border-radius:3px;background:var(--gray-1)}
 .lbar.fill{background:var(--amber)}
 .lbar.target{background:var(--blue);opacity:.5}
-.level-labels{display:flex;justify-content:center;gap:5px;font-size:10px;color:var(--gray-4)}
+.level-labels{display:flex;justify-content:center;gap:5px;font-size:10px;color:var(--gray-4);margin-bottom:24px}
 .level-labels span{width:48px;text-align:center}
-.pillar-summary{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:24px 0 32px;text-align:center}
-.ps-item{}
+.pillar-summary{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:32px;text-align:center}
 .ps-name{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--gray-4);margin-bottom:6px}
 .ps-score{font-size:18px;font-weight:700;margin-bottom:4px}
 .ps-bar{height:3px;background:var(--gray-1);border-radius:2px;overflow:hidden}
 .ps-fill{height:100%;border-radius:2px}
 .low .ps-score{color:var(--red)}.low .ps-fill{background:var(--red)}
 .mid .ps-score{color:var(--amber)}.mid .ps-fill{background:var(--amber)}
-.ok  .ps-score{color:var(--green)}.ok  .ps-fill{background:var(--green)}
+.ok .ps-score{color:var(--green)}.ok .ps-fill{background:var(--green)}
 
-/* ── LEAD FORM ── */
+/* LEAD FORM */
 .lead-card{background:var(--white);border:1px solid var(--gray-1);border-radius:var(--radius);padding:28px;margin-bottom:16px}
 .lead-card h2{font-size:20px;font-weight:600;color:var(--gray-7);margin-bottom:6px}
 .lead-card p{font-size:14px;color:var(--gray-4);margin-bottom:24px;line-height:1.6}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .form-group{display:flex;flex-direction:column;gap:6px}
-.form-group.full{grid-column:1/-1}
 .form-group label{font-size:12px;font-weight:600;color:var(--gray-6);text-transform:uppercase;letter-spacing:.05em}
 .form-group input,.form-group select{padding:10px 14px;border:1.5px solid var(--gray-1);border-radius:var(--radius-sm);font-size:14px;font-family:inherit;color:var(--gray-7);background:var(--white);outline:none;transition:border-color .15s}
 .form-group input:focus,.form-group select:focus{border-color:var(--blue)}
@@ -123,24 +121,25 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
 .submit-btn:disabled{opacity:.5;cursor:default}
 .form-error{font-size:12px;color:var(--red);margin-top:4px;display:none}
 .form-error.show{display:block}
+.success-msg{display:none;background:var(--green-l);border:1px solid #A7F3D0;border-radius:var(--radius-sm);padding:12px 16px;font-size:13px;color:var(--green);margin-bottom:16px;text-align:center}
+.success-msg.show{display:block}
 
-/* ── PROPOSTA ── */
-.proposta{display:none}
+/* PROPOSTA */
 .prop-cover{background:var(--blue-d);border-radius:var(--radius);padding:36px;margin-bottom:20px;position:relative;overflow:hidden}
 .prop-cover::after{content:'';position:absolute;right:-40px;bottom:-60px;width:220px;height:220px;border-radius:50%;border:50px solid rgba(232,98,26,.15);pointer-events:none}
-.prop-cover .pc-tag{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);border:1px solid rgba(232,98,26,.4);padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:16px}
+.pc-tag{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);border:1px solid rgba(232,98,26,.4);padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:16px}
 .prop-cover h1{font-size:clamp(20px,4vw,28px);font-weight:300;color:var(--white);line-height:1.25;margin-bottom:8px;letter-spacing:-.3px}
 .prop-cover h1 strong{font-weight:700;color:var(--orange)}
-.prop-cover .pc-empresa{font-size:15px;color:rgba(255,255,255,.6);margin-bottom:28px}
-.prop-cover .pc-metrics{display:flex;gap:28px;flex-wrap:wrap}
+.pc-empresa{font-size:15px;color:rgba(255,255,255,.6);margin-bottom:28px}
+.pc-metrics{display:flex;gap:28px;flex-wrap:wrap}
 .pcm .v{font-size:26px;font-weight:700;color:var(--white);line-height:1}
 .pcm .v small{font-size:14px;font-weight:400;color:rgba(255,255,255,.4)}
 .pcm .l{font-size:10px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
 
 .prop-section{background:var(--white);border:1px solid var(--gray-1);border-radius:var(--radius);padding:24px;margin-bottom:16px}
-.prop-section .ps-eyebrow{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--orange);margin-bottom:4px}
+.ps-eyebrow{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--orange);margin-bottom:4px}
 .prop-section h2{font-size:18px;font-weight:600;color:var(--gray-7);margin-bottom:6px}
-.prop-section .ps-sub{font-size:13px;color:var(--gray-4);line-height:1.6;margin-bottom:20px}
+.ps-sub{font-size:13px;color:var(--gray-4);line-height:1.6;margin-bottom:20px}
 
 .diag-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
 .dpill{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600}
@@ -151,23 +150,21 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
 .gap-list{display:flex;flex-direction:column;gap:8px}
 .gap-item{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border:1px solid var(--gray-1);border-radius:var(--radius-sm)}
 .gi-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
-.gi-body{}
 .gi-title{font-size:13px;font-weight:600;color:var(--gray-7);margin-bottom:2px}
 .gi-desc{font-size:12px;color:var(--gray-4);line-height:1.5}
 .gi-badge{font-size:10px;font-weight:600;padding:1px 7px;border-radius:3px;margin-left:6px;vertical-align:middle}
 .alta{background:var(--red-l);color:var(--red)}
 .media{background:var(--amber-l);color:var(--amber)}
-.baixa{background:var(--green-l);color:var(--green)}
 
 .sol-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .sol-c{border:1px solid var(--gray-1);border-radius:var(--radius-sm);padding:16px}
 .sol-c.main{border-color:var(--blue);border-width:2px}
-.sol-c .sc-name{font-size:14px;font-weight:600;color:var(--gray-7);margin-bottom:2px}
-.sol-c .sc-partner{font-size:11px;color:var(--gray-4);margin-bottom:8px}
-.sol-c .sc-desc{font-size:12px;color:var(--gray-4);line-height:1.5;margin-bottom:8px}
-.sol-c .sc-tags{display:flex;gap:4px;flex-wrap:wrap}
+.sc-badge{font-size:10px;font-weight:600;padding:2px 7px;border-radius:3px;background:var(--blue-l);color:var(--blue-d);margin-bottom:10px;display:inline-block}
+.sc-name{font-size:14px;font-weight:600;color:var(--gray-7);margin-bottom:2px}
+.sc-partner{font-size:11px;color:var(--gray-4);margin-bottom:8px}
+.sc-desc{font-size:12px;color:var(--gray-4);line-height:1.5;margin-bottom:8px}
+.sc-tags{display:flex;gap:4px;flex-wrap:wrap}
 .sc-tag{font-size:10px;padding:2px 7px;border-radius:3px;border:1px solid var(--gray-1);color:var(--gray-4)}
-.sol-c-badge{font-size:10px;font-weight:600;padding:2px 7px;border-radius:3px;background:var(--blue-l);color:var(--blue-d);margin-bottom:10px;display:inline-block}
 
 .roadmap-steps{display:flex;flex-direction:column;gap:8px}
 .rm-step{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--gray-1);border-radius:var(--radius-sm)}
@@ -175,7 +172,6 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
 .d1{background:var(--red-l);color:var(--red)}
 .d2{background:var(--blue-l);color:var(--blue)}
 .d3{background:var(--green-l);color:var(--green)}
-.rm-content{}
 .rm-title{font-size:13px;font-weight:600;color:var(--gray-7);margin-bottom:2px}
 .rm-desc{font-size:12px;color:var(--gray-4);line-height:1.5}
 .rm-kpi{font-size:11px;color:var(--gray-4);background:var(--gray-0);padding:1px 7px;border-radius:3px;display:inline-block;margin-top:5px}
@@ -197,11 +193,6 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
 .print-btn:hover{background:var(--blue-d)}
 .restart-btn{display:block;width:100%;padding:11px;background:transparent;color:var(--gray-4);border:1px solid var(--gray-1);border-radius:var(--radius-sm);font-size:13px;cursor:pointer;font-family:inherit}
 
-/* ── SUCCESS MESSAGE ── */
-.success-msg{display:none;background:var(--green-l);border:1px solid #A7F3D0;border-radius:var(--radius-sm);padding:12px 16px;font-size:13px;color:var(--green);margin-bottom:16px;text-align:center}
-.success-msg.show{display:block}
-
-/* ── RESPONSIVE ── */
 @media(max-width:600px){
   .hero{padding:44px 20px 36px}
   .hero-stats{gap:24px}
@@ -209,13 +200,12 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
   .sol-cards{grid-template-columns:1fr}
   .next-grid{grid-template-columns:1fr 1fr}
   .form-grid{grid-template-columns:1fr}
-  .prop-cover .pc-metrics{gap:18px}
+  .pc-metrics{gap:18px}
 }
 @media print{
-  nav,.progress-wrap,.btn-row,.print-btn,.restart-btn{display:none!important}
+  nav,#assessment-view,#lead-view,.progress-wrap,.btn-row,.print-btn,.restart-btn{display:none!important}
   body{background:white}
-  .proposta{display:block!important}
-  #assessment-view{display:none!important}
+  #proposta-view{display:block!important}
 }
 </style>
 </head>
@@ -242,15 +232,15 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
   <div class="hero-stats">
     <div class="h-stat"><div class="val">15</div><div class="lbl">questões</div></div>
     <div class="h-stat"><div class="val">5</div><div class="lbl">pilares CTEM</div></div>
-    <div class="h-stat"><div class="val">5min</div><div class="lbl">para completar</div></div>
+    <div class="h-stat"><div class="val">5 min</div><div class="lbl">para completar</div></div>
     <div class="h-stat"><div class="val">100%</div><div class="lbl">gratuito</div></div>
   </div>
 </div>
 
-<!-- ASSESSMENT VIEW -->
+<!-- ASSESSMENT -->
 <div id="assessment-view">
   <div class="wrap">
-    <div class="progress-wrap" id="progress-wrap">
+    <div class="progress-wrap">
       <div class="progress-top">
         <span class="p-label" id="prog-label">Questão 1 de 15</span>
         <div class="p-phases" id="phase-nav"></div>
@@ -261,48 +251,45 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
     </div>
     <div id="q-container"></div>
     <div class="btn-row">
-      <button class="btn btn-ghost" id="btn-back" onclick="navQ(-1)" style="visibility:hidden">← Anterior</button>
-      <button class="btn btn-primary" id="btn-next" onclick="navQ(1)" disabled>Próximo →</button>
+      <button class="btn btn-ghost" id="btn-back" onclick="navQ(-1)" style="visibility:hidden">&#8592; Anterior</button>
+      <button class="btn btn-primary" id="btn-next" onclick="navQ(1)" disabled>Próximo &#8594;</button>
     </div>
   </div>
 </div>
 
-<!-- LEAD CAPTURE VIEW -->
+<!-- LEAD -->
 <div id="lead-view" style="display:none">
   <div class="wrap">
-    <!-- Score preview -->
     <div class="score-view">
       <div class="score-ring" id="sr-ring">
-        <div class="s-num" id="sr-num">–</div>
+        <div class="s-num" id="sr-num">0</div>
         <div class="s-of">/ 60</div>
       </div>
-      <div class="score-level" id="sr-level">–</div>
-      <div class="score-desc" id="sr-desc">–</div>
+      <div class="score-level" id="sr-level">Calculando...</div>
+      <div class="score-desc" id="sr-desc"></div>
       <div class="level-bar" id="sr-bar"></div>
       <div class="level-labels"><span>Reativo</span><span>Inicial</span><span>Definido</span><span>Gerenciado</span><span>Otimizado</span></div>
       <div class="pillar-summary" id="pillar-summary"></div>
     </div>
-
-    <!-- Lead form -->
     <div class="lead-card">
       <h2>Receba sua proposta personalizada</h2>
-      <p>Seu diagnóstico está pronto. Para acessar o plano de evolução completo com soluções e roadmap de 12 meses, preencha os dados abaixo.</p>
-      <div class="success-msg" id="success-msg">Dados enviados com sucesso! Gerando sua proposta...</div>
-      <form id="lead-form" onsubmit="submitLead(event)">
+      <p>Seu diagnóstico está pronto. Preencha os dados abaixo para acessar o plano de evolução completo com soluções e roadmap de 12 meses.</p>
+      <div class="success-msg" id="success-msg">&#10003; Dados recebidos! Gerando sua proposta...</div>
+      <div id="form-wrap">
         <div class="form-grid">
           <div class="form-group">
             <label>Nome completo *</label>
-            <input type="text" id="f-nome" placeholder="João da Silva" required>
+            <input type="text" id="f-nome" placeholder="João da Silva">
             <div class="form-error" id="err-nome">Informe seu nome</div>
           </div>
           <div class="form-group">
             <label>Empresa *</label>
-            <input type="text" id="f-empresa" placeholder="Banco Exemplo S.A." required>
+            <input type="text" id="f-empresa" placeholder="Empresa S.A.">
             <div class="form-error" id="err-empresa">Informe sua empresa</div>
           </div>
           <div class="form-group">
             <label>Cargo *</label>
-            <select id="f-cargo" required>
+            <select id="f-cargo">
               <option value="">Selecione...</option>
               <option>CISO</option>
               <option>Gerente de Segurança</option>
@@ -312,10 +299,11 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
               <option>Consultor</option>
               <option>Outro</option>
             </select>
+            <div class="form-error" id="err-cargo">Selecione seu cargo</div>
           </div>
           <div class="form-group">
             <label>E-mail corporativo *</label>
-            <input type="email" id="f-email" placeholder="joao@empresa.com.br" required>
+            <input type="email" id="f-email" placeholder="nome@empresa.com.br">
             <div class="form-error" id="err-email">Informe um e-mail válido</div>
           </div>
           <div class="form-group">
@@ -338,38 +326,35 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
             </select>
           </div>
         </div>
-        <div class="privacy-note">🔒 Seus dados são usados exclusivamente para personalizar sua proposta e entrar em contato sobre seu programa CTEM. Sem spam.</div>
-        <button type="submit" class="submit-btn" id="submit-btn">Ver minha proposta personalizada →</button>
-      </form>
+        <div class="privacy-note">&#128274; Seus dados são usados exclusivamente para personalizar sua proposta e entrar em contato sobre seu programa CTEM. Sem spam.</div>
+        <button class="submit-btn" id="submit-btn" onclick="submitLead()">Ver minha proposta personalizada &#8594;</button>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- PROPOSTA VIEW -->
+<!-- PROPOSTA -->
 <div id="proposta-view" style="display:none">
-  <div class="wrap proposta" id="proposta-content">
-
+  <div class="wrap">
     <div class="prop-cover">
       <div class="pc-tag">Toledo Cyber.Consulting · Proposta Executiva CTEM</div>
       <h1>Programa de gestão contínua<br>de exposição a <strong>ameaças</strong></h1>
-      <div class="pc-empresa" id="pc-empresa">—</div>
+      <div class="pc-empresa" id="pc-empresa"></div>
       <div class="pc-metrics">
-        <div class="pcm"><div class="v" id="pc-score">–<small>/60</small></div><div class="l">Score atual</div></div>
-        <div class="pcm"><div class="v" id="pc-meta">–<small>/60</small></div><div class="l">Meta 12 meses</div></div>
-        <div class="pcm"><div class="v" id="pc-gap">–</div><div class="l">Pontos a evoluir</div></div>
-        <div class="pcm"><div class="v" id="pc-nivel">–</div><div class="l">Nível atual</div></div>
+        <div class="pcm"><div class="v" id="pc-score">0<small>/60</small></div><div class="l">Score atual</div></div>
+        <div class="pcm"><div class="v" id="pc-meta">0<small>/60</small></div><div class="l">Meta 12 meses</div></div>
+        <div class="pcm"><div class="v" id="pc-gap">+0</div><div class="l">Pontos a evoluir</div></div>
+        <div class="pcm"><div class="v" id="pc-nivel">—</div><div class="l">Nível atual</div></div>
       </div>
     </div>
 
-    <!-- Diagnóstico -->
     <div class="prop-section">
       <div class="ps-eyebrow">01 · Diagnóstico</div>
       <h2>Resultado do seu assessment</h2>
-      <p class="ps-sub" id="pp-diag-desc">–</p>
+      <p class="ps-sub" id="pp-diag-desc"></p>
       <div class="diag-pills" id="pp-pills"></div>
     </div>
 
-    <!-- Gaps -->
     <div class="prop-section">
       <div class="ps-eyebrow">02 · Lacunas identificadas</div>
       <h2>O que precisa evoluir</h2>
@@ -377,14 +362,13 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
       <div class="gap-list" id="pp-gaps"></div>
     </div>
 
-    <!-- Soluções -->
     <div class="prop-section">
       <div class="ps-eyebrow">03 · Soluções recomendadas</div>
       <h2>Soluções recomendadas por Toledo Cyber.Consulting</h2>
-      <p class="ps-sub">Soluções selecionadas com base nos seus gaps. Cada tecnologia endereça um ou mais pilares críticos.</p>
+      <p class="ps-sub">Tecnologias selecionadas com base nos seus gaps. Cada solução endereça um ou mais pilares críticos do framework CTEM.</p>
       <div class="sol-cards">
         <div class="sol-c main">
-          <div class="sol-c-badge">Solução principal</div>
+          <span class="sc-badge">Solução principal</span>
           <div class="sc-name">Tenable One</div>
           <div class="sc-partner">Tenable · via Toledo Cyber.Consulting</div>
           <div class="sc-desc">VM contínuo, EASM, identity exposure e cloud security em painel único. Substitui scans periódicos por descoberta contínua com priorização por risco real.</div>
@@ -411,21 +395,19 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
       </div>
     </div>
 
-    <!-- Roadmap -->
     <div class="prop-section">
       <div class="ps-eyebrow">04 · Roadmap</div>
       <h2>Plano de execução · 12 meses</h2>
       <p class="ps-sub">Sequência estruturada para evoluir do nível <span id="rm-nivel-atual">Inicial</span> ao nível <span id="rm-nivel-meta">Definido</span> com marcos mensuráveis.</p>
       <div class="roadmap-steps">
-        <div class="rm-step"><div class="rm-dot d1">1</div><div class="rm-content"><div class="rm-title">Deploy Forescout — inventário agentless <span class="rm-sol">Forescout</span></div><div class="rm-desc">Descoberta contínua de todos os dispositivos. Meta: &gt;80% de cobertura em 60 dias.</div><span class="rm-kpi">KPI: % ativos inventariados · meta &gt;80% em 60d</span></div></div>
-        <div class="rm-step"><div class="rm-dot d1">1</div><div class="rm-content"><div class="rm-title">Tenable One — VM contínuo <span class="rm-sol">Tenable</span></div><div class="rm-desc">Substituição de scans periódicos por descoberta contínua com threat intelligence integrada.</div><span class="rm-kpi">KPI: tempo entre scan e descoberta · meta &lt;24h</span></div></div>
-        <div class="rm-step"><div class="rm-dot d2">2</div><div class="rm-content"><div class="rm-title">Risk-based prioritization + contexto de negócio <span class="rm-sol">Tenable</span></div><div class="rm-desc">Mapeamento de ativos críticos aos processos de negócio. SLA crítico &lt;7 dias, alto &lt;15 dias.</div><span class="rm-kpi">KPI: SLA compliance críticas · meta &gt;90%</span></div></div>
-        <div class="rm-step"><div class="rm-dot d2">2</div><div class="rm-content"><div class="rm-title">EASM + Varonis — superfície externa e dados <span class="rm-sol">Tenable + Varonis</span></div><div class="rm-desc">Visibilidade de ativos expostos na internet e classificação de dados sensíveis com monitoramento de permissões.</div><span class="rm-kpi">KPI: ativos externos não catalogados · meta 0</span></div></div>
-        <div class="rm-step"><div class="rm-dot d3">3</div><div class="rm-content"><div class="rm-title">Integração SecOps + dashboard executivo</div><div class="rm-desc">Conexão ao ITSM/SIEM. Fluxo unificado de remediação. KPIs para CISO e board em tempo real.</div><span class="rm-kpi">KPI: MTTR críticas · meta &lt;7 dias · score CTEM meta <span id="rm-meta-score">42</span>/60</span></div></div>
+        <div class="rm-step"><div class="rm-dot d1">1</div><div><div class="rm-title">Deploy Forescout — inventário agentless <span class="rm-sol">Forescout</span></div><div class="rm-desc">Descoberta contínua de todos os dispositivos. Meta: &gt;80% de cobertura em 60 dias.</div><span class="rm-kpi">KPI: % ativos inventariados · meta &gt;80% em 60d</span></div></div>
+        <div class="rm-step"><div class="rm-dot d1">1</div><div><div class="rm-title">Tenable One — VM contínuo <span class="rm-sol">Tenable</span></div><div class="rm-desc">Substituição de scans periódicos por descoberta contínua com threat intelligence integrada.</div><span class="rm-kpi">KPI: tempo entre scan e descoberta · meta &lt;24h</span></div></div>
+        <div class="rm-step"><div class="rm-dot d2">2</div><div><div class="rm-title">Risk-based prioritization + contexto de negócio <span class="rm-sol">Tenable</span></div><div class="rm-desc">Mapeamento de ativos críticos aos processos de negócio. SLA crítico &lt;7 dias, alto &lt;15 dias.</div><span class="rm-kpi">KPI: SLA compliance críticas · meta &gt;90%</span></div></div>
+        <div class="rm-step"><div class="rm-dot d2">2</div><div><div class="rm-title">EASM + Varonis — superfície externa e dados <span class="rm-sol">Tenable + Varonis</span></div><div class="rm-desc">Visibilidade de ativos expostos na internet e classificação de dados sensíveis.</div><span class="rm-kpi">KPI: ativos externos não catalogados · meta 0</span></div></div>
+        <div class="rm-step"><div class="rm-dot d3">3</div><div><div class="rm-title">Integração SecOps + dashboard executivo</div><div class="rm-desc">Conexão ao ITSM/SIEM. Fluxo unificado de remediação. KPIs para CISO em tempo real.</div><span class="rm-kpi">KPI: MTTR críticas · meta &lt;7 dias · score CTEM meta <span id="rm-meta-score">42</span>/60</span></div></div>
       </div>
     </div>
 
-    <!-- Próximos passos -->
     <div class="prop-section">
       <div class="ps-eyebrow">05 · Próximos passos</div>
       <h2>Como avançar com a Toledo Cyber.Consulting</h2>
@@ -445,33 +427,32 @@ nav{background:var(--white);border-bottom:1px solid var(--gray-1);padding:0 24px
       </div>
       <div class="pf-info">
         <div>Proposta gerada via toledocyber.consulting</div>
-        <div style="margin-top:2px" id="prop-date">–</div>
+        <div style="margin-top:2px" id="prop-date"></div>
       </div>
     </div>
 
-    <button class="print-btn" onclick="window.print()">⬇ Salvar / Imprimir proposta</button>
-    <button class="restart-btn" onclick="restartAll()">← Refazer assessment</button>
-
+    <button class="print-btn" onclick="window.print()">&#11015; Salvar / Imprimir proposta</button>
+    <button class="restart-btn" onclick="restartAll()">&#8592; Refazer assessment</button>
   </div>
 </div>
 
 <script>
-const PHASES=[
-  {id:'scoping',name:'Escopo',color:'#1A5FA8'},
-  {id:'discovery',name:'Descoberta',color:'#0F6E56'},
-  {id:'prioritization',name:'Priorização',color:'#854F0B'},
-  {id:'validation',name:'Validação',color:'#A32D2D'},
-  {id:'mobilization',name:'Mobilização',color:'#3C3489'}
+var PHASES=[
+  {id:'scoping',name:'Escopo'},
+  {id:'discovery',name:'Descoberta'},
+  {id:'prioritization',name:'Priorizacao'},
+  {id:'validation',name:'Validacao'},
+  {id:'mobilization',name:'Mobilizacao'}
 ];
-const QUESTIONS=[
+var QUESTIONS=[
   {phase:0,text:'Como sua organização define e mantém o inventário de ativos digitais críticos?',opts:[
     {label:'Não há inventário formal — ativos conhecidos informalmente',score:1},
     {label:'Inventário manual em planilhas, atualizado esporadicamente',score:2},
     {label:'Ferramenta de CMDB em uso, mas com gaps de cobertura',score:3},
-    {label:'Inventário automatizado e contínuo com cobertura >90%',score:4}]},
+    {label:'Inventário automatizado e contínuo com cobertura acima de 90%',score:4}]},
   {phase:0,text:'Qual é o escopo das superfícies de ataque monitoradas?',opts:[
     {label:'Apenas perímetro de rede tradicional (firewall, DMZ)',score:1},
-    {label:'Rede + endpoints, sem cobertura de cloud e SaaS',score:2},
+    {label:'Rede e endpoints, sem cobertura de cloud e SaaS',score:2},
     {label:'Rede, endpoints e ambientes cloud parcialmente',score:3},
     {label:'Cobertura completa: on-premises, cloud, SaaS, OT/IoT e terceiros',score:4}]},
   {phase:0,text:'Como são tratadas exposições em ambientes de terceiros?',opts:[
@@ -496,14 +477,14 @@ const QUESTIONS=[
     {label:'Shift-left completo com correlação de exposição em produção e código-fonte',score:4}]},
   {phase:2,text:'Como sua organização prioriza vulnerabilidades para remediação?',opts:[
     {label:'Por CVSS score apenas, sem contexto de negócio',score:1},
-    {label:'CVSS + criticidade do ativo, processo manual',score:2},
+    {label:'CVSS mais criticidade do ativo, processo manual',score:2},
     {label:'Risk-based VM com threat intelligence e contexto de exploração',score:3},
     {label:'Plataforma de exposure management com priorização preditiva',score:4}]},
   {phase:2,text:'Qual é o SLA médio para remediação de vulnerabilidades críticas?',opts:[
     {label:'Sem SLA definido — remediação ad hoc',score:1},
-    {label:'SLA >30 dias para críticas',score:2},
-    {label:'SLA de 7–15 dias com acompanhamento',score:3},
-    {label:'SLA <7 dias com priorização por risco real de exploração',score:4}]},
+    {label:'SLA acima de 30 dias para críticas',score:2},
+    {label:'SLA de 7 a 15 dias com acompanhamento',score:3},
+    {label:'SLA abaixo de 7 dias com priorização por risco real de exploração',score:4}]},
   {phase:2,text:'Como são correlacionados contexto de negócio e exposições técnicas?',opts:[
     {label:'Não há correlação — TI e negócio operam separadamente',score:1},
     {label:'Reuniões periódicas entre TI e negócio para alinhamento',score:2},
@@ -512,7 +493,7 @@ const QUESTIONS=[
   {phase:3,text:'Como sua organização valida se controles de segurança estão efetivos?',opts:[
     {label:'Sem validação — assumimos que controles funcionam',score:1},
     {label:'Pentest anual ou semi-anual',score:2},
-    {label:'Pentest + BAS (Breach & Attack Simulation) periódico',score:3},
+    {label:'Pentest mais BAS (Breach and Attack Simulation) periódico',score:3},
     {label:'Validação contínua com BAS automatizado e purple team integrado',score:4}]},
   {phase:3,text:'Qual é o nível de maturidade do programa de Red Team / simulação de adversários?',opts:[
     {label:'Sem atividades de Red Team ou simulação',score:1},
@@ -523,7 +504,7 @@ const QUESTIONS=[
     {label:'Relatórios arquivados, pouco acionamento prático',score:1},
     {label:'Ações corretivas definidas, mas rastreamento manual',score:2},
     {label:'Resultados integrados ao processo de gestão de vulnerabilidades',score:3},
-    {label:'Feedback loop automatizado: validação → priorização → remediação → revalidação',score:4}]},
+    {label:'Feedback loop automatizado: validação, priorização, remediação, revalidação',score:4}]},
   {phase:4,text:'Como sua organização coordena a remediação entre TI, segurança e negócio?',opts:[
     {label:'Sem processo formal — comunicação ad hoc',score:1},
     {label:'Tickets no sistema ITSM, sem integração com sec ops',score:2},
@@ -538,83 +519,101 @@ const QUESTIONS=[
     {label:'CTEM opera isoladamente das demais iniciativas',score:1},
     {label:'Integração parcial com SOC e gestão de incidentes',score:2},
     {label:'CTEM integrado a SOC, GRC e programas de conformidade',score:3},
-    {label:'Programa unificado: CTEM + SOC + GRC + TPRM totalmente integrados',score:4}]}
+    {label:'Programa unificado: CTEM, SOC, GRC e TPRM totalmente integrados',score:4}]}
 ];
-const LEVELS=[
-  {min:0,max:20,name:'Reativo',meta:28,color:'#C53030',ring:'#C53030',desc:'A organização responde a incidentes sem processo proativo. Exposições são conhecidas apenas após exploração.',bars:[1,0,0,0,0]},
-  {min:21,max:34,name:'Inicial',meta:42,color:'#92620A',ring:'#BA7517',desc:'Processos básicos de VM existem, mas são pontuais e sem integração. Cobertura parcial com gaps críticos.',bars:[1,1,0,0,0]},
-  {min:35,max:47,name:'Definido',meta:52,color:'#1A5FA8',ring:'#1A5FA8',desc:'Processos estruturados em implementação. Boa cobertura técnica, integração progressiva entre pilares.',bars:[1,1,1,0,0]},
-  {min:48,max:55,name:'Gerenciado',meta:58,color:'#166534',ring:'#1D9E75',desc:'CTEM operacional com métricas, SLAs e integração entre pilares. Organização reduz exposição proativamente.',bars:[1,1,1,1,0]},
-  {min:56,max:60,name:'Otimizado',meta:60,color:'#3C3489',ring:'#534AB7',desc:'Programa CTEM maduro e contínuo. Exposição gerenciada em tempo real com feedback loop automatizado.',bars:[1,1,1,1,1]}
+var LEVELS=[
+  {min:0,max:20,name:'Reativo',meta:28,color:'#C53030',desc:'A organização responde a incidentes sem processo proativo. Exposições são conhecidas apenas após exploração.'},
+  {min:21,max:34,name:'Inicial',meta:42,color:'#92620A',desc:'Processos básicos de VM existem, mas são pontuais e sem integração. Cobertura parcial com gaps críticos.'},
+  {min:35,max:47,name:'Definido',meta:52,color:'#1A5FA8',desc:'Processos estruturados em implementação. Boa cobertura técnica com integração progressiva entre pilares.'},
+  {min:48,max:55,name:'Gerenciado',meta:58,color:'#166534',desc:'CTEM operacional com métricas, SLAs e integração entre pilares. Organização reduz exposição proativamente.'},
+  {min:56,max:60,name:'Otimizado',meta:60,color:'#3C3489',desc:'Programa CTEM maduro e contínuo. Exposição gerenciada em tempo real com feedback loop automatizado.'}
 ];
-const GAP_DATA=[
+var GAP_DATA=[
   {pilar:'Escopo',phase:0,alta:true,gap:'Inventário manual desatualizado. Dispositivos não gerenciados (OT, IoT, BYOD) fora do radar. Avaliação de terceiros apenas via questionários anuais.'},
-  {pilar:'Descoberta',phase:1,alta:true,gap:'Scans periódicos sem threat intelligence. Superfície de ataque externa (EASM) não monitorada. Nenhuma integração de segurança no ciclo de desenvolvimento.'},
-  {pilar:'Priorização',phase:2,alta:true,gap:'Priorização por CVSS puro sem contexto de negócio. SLA de críticas superior a 30 dias. Sem correlação entre ativos técnicos e processos de negócio.'},
+  {pilar:'Descoberta',phase:1,alta:true,gap:'Scans periódicos sem threat intelligence. Superfície de ataque externa (EASM) não monitorada. Sem integração de segurança no ciclo de desenvolvimento.'},
+  {pilar:'Priorização',phase:2,alta:true,gap:'Priorização por CVSS puro sem contexto de negócio. SLA de críticas acima de 30 dias. Sem correlação entre ativos técnicos e processos de negócio.'},
   {pilar:'Validação',phase:3,alta:false,gap:'Sem validação contínua de efetividade de controles. Pentest pontual como único mecanismo. Baixo índice de acionamento dos relatórios.'},
   {pilar:'Mobilização',phase:4,alta:false,gap:'Processo de remediação sem integração entre SecOps e TI. Sem dashboard executivo de risco. CTEM isolado das iniciativas de GRC e compliance.'}
 ];
 
-let answers=new Array(QUESTIONS.length).fill(null);
-let current=0;
-let leadData={};
+var answers=new Array(QUESTIONS.length).fill(null);
+var current=0;
+var leadData={};
 
 function getPhaseScore(pi){
-  return QUESTIONS.reduce((s,q,qi)=>q.phase===pi?s+(answers[qi]||0):s,0);
+  var s=0;
+  for(var i=0;i<QUESTIONS.length;i++){if(QUESTIONS[i].phase===pi)s+=(answers[i]||0);}
+  return s;
 }
-function getTotalScore(){return answers.reduce((s,v)=>s+(v||0),0)}
-function getLevel(score){return LEVELS.find(l=>score>=l.min&&score<=l.max)||LEVELS[0]}
-function getPillars(){return PHASES.map((p,pi)=>{
-  const qs=QUESTIONS.filter(q=>q.phase===pi);
-  const score=getPhaseScore(pi);
-  const pct=Math.round(score/(qs.length*4)*100);
-  const cls=pct<=40?'low':pct<=60?'mid':'ok';
-  return{name:p.name,score,max:qs.length*4,pct,cls};
-})}
+function getTotalScore(){
+  var s=0;for(var i=0;i<answers.length;i++)s+=(answers[i]||0);return s;
+}
+function getLevel(score){
+  for(var i=0;i<LEVELS.length;i++){if(score>=LEVELS[i].min&&score<=LEVELS[i].max)return LEVELS[i];}
+  return LEVELS[0];
+}
+function getPillars(){
+  return PHASES.map(function(p,pi){
+    var qs=0;for(var i=0;i<QUESTIONS.length;i++){if(QUESTIONS[i].phase===pi)qs++;}
+    var score=getPhaseScore(pi);
+    var max=qs*4;
+    var pct=max>0?Math.round(score/max*100):0;
+    var cls=pct<=40?'low':pct<=60?'mid':'ok';
+    return{name:p.name,score:score,max:max,pct:pct,cls:cls};
+  });
+}
 
 function renderPhaseNav(){
-  const nav=document.getElementById('phase-nav');
-  nav.innerHTML=PHASES.map((p,pi)=>{
-    const phaseQs=QUESTIONS.map((q,qi)=>q.phase===pi?qi:-1).filter(x=>x>=0);
-    const done=phaseQs.every(i=>answers[i]!==null);
-    const active=QUESTIONS[current].phase===pi;
-    return`<span class="p-phase ${active?'active':''} ${done&&!active?'done':''}">${p.name}</span>`;
-  }).join('');
+  var nav=document.getElementById('phase-nav');
+  if(!nav)return;
+  var html='';
+  for(var pi=0;pi<PHASES.length;pi++){
+    var idxs=[];
+    for(var i=0;i<QUESTIONS.length;i++){if(QUESTIONS[i].phase===pi)idxs.push(i);}
+    var done=idxs.every(function(i){return answers[i]!==null;});
+    var active=QUESTIONS[current].phase===pi;
+    html+='<span class="p-phase'+(active?' active':'')+(done&&!active?' done':'')+'">'+PHASES[pi].name+'</span>';
+  }
+  nav.innerHTML=html;
 }
 
 function renderQ(){
-  const q=QUESTIONS[current];
-  const answered=answers.filter(a=>a!==null).length;
-  document.getElementById('prog-fill').style.width=(answered/QUESTIONS.length*100)+'%';
-  document.getElementById('prog-label').textContent=`Questão ${current+1} de ${QUESTIONS.length}`;
-  document.getElementById('btn-next').disabled=answers[current]===null;
-  document.getElementById('btn-back').style.visibility=current>0?'visible':'hidden';
-  document.getElementById('btn-next').textContent=current===QUESTIONS.length-1?'Ver resultado →':'Próximo →';
-  document.getElementById('q-container').innerHTML=`
-    <div class="q-card">
-      <div class="q-meta">${PHASES[q.phase].name} · ${current+1} de ${QUESTIONS.length}</div>
-      <div class="q-text">${q.text}</div>
-      <div class="options">
-        ${q.opts.map(o=>`
-          <div class="opt ${answers[current]===o.score?'selected':''}" onclick="selectOpt(${o.score})">
-            <div class="opt-num">${o.score}</div>
-            <div class="opt-text">${o.label}</div>
-          </div>`).join('')}
-      </div>
-    </div>`;
+  var q=QUESTIONS[current];
+  var answered=0;for(var i=0;i<answers.length;i++){if(answers[i]!==null)answered++;}
+  var fill=document.getElementById('prog-fill');
+  var lbl=document.getElementById('prog-label');
+  var btnNext=document.getElementById('btn-next');
+  var btnBack=document.getElementById('btn-back');
+  var container=document.getElementById('q-container');
+  if(!fill||!lbl||!btnNext||!btnBack||!container)return;
+  fill.style.width=Math.round(answered/QUESTIONS.length*100)+'%';
+  lbl.textContent='Questão '+(current+1)+' de '+QUESTIONS.length;
+  btnNext.disabled=answers[current]===null;
+  btnBack.style.visibility=current>0?'visible':'hidden';
+  btnNext.textContent=current===QUESTIONS.length-1?'Ver resultado \u2192':'Próximo \u2192';
+  var opts='';
+  for(var oi=0;oi<q.opts.length;oi++){
+    var o=q.opts[oi];
+    var sel=answers[current]===o.score?' selected':'';
+    opts+='<div class="opt'+sel+'" onclick="selectOpt('+o.score+')">'
+      +'<div class="opt-num">'+o.score+'</div>'
+      +'<div class="opt-text">'+o.label+'</div>'
+      +'</div>';
+  }
+  container.innerHTML='<div class="q-card">'
+    +'<div class="q-meta">'+PHASES[q.phase].name+' · '+(current+1)+' de '+QUESTIONS.length+'</div>'
+    +'<div class="q-text">'+q.text+'</div>'
+    +'<div class="options">'+opts+'</div>'
+    +'</div>';
   renderPhaseNav();
 }
 
-function selectOpt(score){
-  answers[current]=score;
-  renderQ();
-}
+function selectOpt(score){answers[current]=score;renderQ();}
 
 function navQ(dir){
-  if(dir===1&&current===QUESTIONS.length-1){showLeadView();return}
+  if(dir===1&&current===QUESTIONS.length-1){showLeadView();return;}
   if(dir===-1&&current===0)return;
-  current+=dir;
-  renderQ();
+  current+=dir;renderQ();
 }
 
 function showLeadView(){
@@ -622,52 +621,57 @@ function showLeadView(){
   document.getElementById('hero-section').style.display='none';
   document.getElementById('lead-view').style.display='block';
   document.getElementById('nav-badge').textContent='Seu resultado';
-  window.scrollTo({top:0,behavior:'smooth'});
-
-  const score=getTotalScore();
-  const level=getLevel(score);
-  const pillars=getPillars();
-
-  const ring=document.getElementById('sr-ring');
-  ring.style.borderColor=level.ring;
-  document.getElementById('sr-num').style.color=level.ring;
-  document.getElementById('sr-num').textContent=score;
-  document.getElementById('sr-level').textContent='Nível '+level.name;
-  document.getElementById('sr-level').style.color=level.ring;
+  window.scrollTo(0,0);
+  var score=getTotalScore();
+  var level=getLevel(score);
+  var pillars=getPillars();
+  var ring=document.getElementById('sr-ring');
+  ring.style.borderColor=level.color;
+  var snum=document.getElementById('sr-num');
+  snum.textContent=score;snum.style.color=level.color;
+  var slevel=document.getElementById('sr-level');
+  slevel.textContent='Nível '+level.name;slevel.style.color=level.color;
   document.getElementById('sr-desc').textContent=level.desc;
-
-  const bar=document.getElementById('sr-bar');
-  bar.innerHTML=LEVELS.map((l,i)=>{
-    const isCurrent=l.name===level.name;
-    const isTarget=LEVELS.indexOf(level)+1===i;
-    return`<div class="lbar ${isCurrent?'fill':''} ${isTarget?'target':''}" title="${l.name}"></div>`;
-  }).join('');
-
-  document.getElementById('pillar-summary').innerHTML=pillars.map(p=>`
-    <div class="ps-item ${p.cls}">
-      <div class="ps-name">${p.name}</div>
-      <div class="ps-score">${p.score}/${p.max}</div>
-      <div class="ps-bar"><div class="ps-fill" style="width:${p.pct}%"></div></div>
-    </div>`).join('');
+  var bar=document.getElementById('sr-bar');
+  var barHtml='';
+  for(var i=0;i<LEVELS.length;i++){
+    var isCur=LEVELS[i].name===level.name;
+    var isTarget=LEVELS.indexOf(level)+1===i;
+    barHtml+='<div class="lbar'+(isCur?' fill':'')+(isTarget?' target':'')+'"></div>';
+  }
+  bar.innerHTML=barHtml;
+  var ps=document.getElementById('pillar-summary');
+  var psHtml='';
+  for(var j=0;j<pillars.length;j++){
+    var p=pillars[j];
+    psHtml+='<div class="ps-item '+p.cls+'">'
+      +'<div class="ps-name">'+p.name+'</div>'
+      +'<div class="ps-score">'+p.score+'/'+p.max+'</div>'
+      +'<div class="ps-bar"><div class="ps-fill" style="width:'+p.pct+'%"></div></div>'
+      +'</div>';
+  }
+  ps.innerHTML=psHtml;
 }
 
 function validateForm(){
-  let ok=true;
-  const nome=document.getElementById('f-nome').value.trim();
-  const empresa=document.getElementById('f-empresa').value.trim();
-  const cargo=document.getElementById('f-cargo').value;
-  const email=document.getElementById('f-email').value.trim();
-  document.getElementById('err-nome').classList.toggle('show',!nome);
-  document.getElementById('err-empresa').classList.toggle('show',!empresa);
-  document.getElementById('err-email').classList.toggle('show',!email||!/\S+@\S+\.\S+/.test(email));
-  if(!nome||!empresa||!cargo||!email||!/\S+@\S+\.\S+/.test(email))ok=false;
+  var ok=true;
+  var nome=document.getElementById('f-nome').value.trim();
+  var empresa=document.getElementById('f-empresa').value.trim();
+  var cargo=document.getElementById('f-cargo').value;
+  var email=document.getElementById('f-email').value.trim();
+  var errNome=document.getElementById('err-nome');
+  var errEmp=document.getElementById('err-empresa');
+  var errCargo=document.getElementById('err-cargo');
+  var errEmail=document.getElementById('err-email');
+  if(!nome){errNome.classList.add('show');ok=false;}else{errNome.classList.remove('show');}
+  if(!empresa){errEmp.classList.add('show');ok=false;}else{errEmp.classList.remove('show');}
+  if(!cargo){errCargo.classList.add('show');ok=false;}else{errCargo.classList.remove('show');}
+  if(!email||!/\S+@\S+\.\S+/.test(email)){errEmail.classList.add('show');ok=false;}else{errEmail.classList.remove('show');}
   return ok;
 }
 
-async function submitLead(e){
-  e.preventDefault();
+function submitLead(){
   if(!validateForm())return;
-
   leadData={
     nome:document.getElementById('f-nome').value.trim(),
     empresa:document.getElementById('f-empresa').value.trim(),
@@ -678,99 +682,86 @@ async function submitLead(e){
     score:getTotalScore(),
     nivel:getLevel(getTotalScore()).name
   };
-
-  const btn=document.getElementById('submit-btn');
-  btn.disabled=true;
-  btn.textContent='Enviando...';
-
-  // Envia para Formspree — substitua YOUR_FORM_ID pelo seu ID real
-  try{
-    const score=getTotalScore();
-    const level=getLevel(score);
-    const pillars=getPillars();
-    const payload={
-      nome:leadData.nome,
-      empresa:leadData.empresa,
-      cargo:leadData.cargo,
-      email:leadData.email,
-      telefone:leadData.tel||'Não informado',
-      setor:leadData.setor||'Não informado',
-      score_ctem:`${score}/60`,
-      nivel_maturidade:level.name,
-      pilares:pillars.map(p=>`${p.name}: ${p.score}/${p.max} (${p.pct}%)`).join(' | '),
-      data:new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})
-    };
-
-    await fetch('https://formspree.io/f/mvznqjkw',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify(payload)
-    });
-  }catch(err){
-    // Silently continue — proposta é gerada mesmo sem envio
-  }
-
+  var btn=document.getElementById('submit-btn');
+  btn.disabled=true;btn.textContent='Enviando...';
   document.getElementById('success-msg').classList.add('show');
-  setTimeout(()=>showProposta(),1200);
+
+  var score=getTotalScore();
+  var level=getLevel(score);
+  var pillars=getPillars();
+  var payload={
+    nome:leadData.nome,empresa:leadData.empresa,cargo:leadData.cargo,
+    email:leadData.email,telefone:leadData.tel||'Não informado',
+    setor:leadData.setor||'Não informado',
+    score_ctem:score+'/60',nivel_maturidade:level.name,
+    pilares:pillars.map(function(p){return p.name+': '+p.score+'/'+p.max+' ('+p.pct+'%)'}).join(' | '),
+    data:new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})
+  };
+
+  fetch('https://formspree.io/f/YOUR_FORM_ID',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify(payload)
+  }).catch(function(){}).finally(function(){
+    setTimeout(function(){showProposta();},1000);
+  });
 }
 
 function showProposta(){
   document.getElementById('lead-view').style.display='none';
   document.getElementById('proposta-view').style.display='block';
   document.getElementById('nav-badge').textContent='Sua proposta';
-  window.scrollTo({top:0,behavior:'smooth'});
-
-  const score=getTotalScore();
-  const level=getLevel(score);
-  const pillars=getPillars();
-  const now=new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});
-
+  window.scrollTo(0,0);
+  var score=getTotalScore();
+  var level=getLevel(score);
+  var pillars=getPillars();
+  var now=new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});
   document.getElementById('pc-empresa').textContent=leadData.empresa+' · '+leadData.cargo+': '+leadData.nome;
   document.getElementById('pc-score').innerHTML=score+'<small>/60</small>';
   document.getElementById('pc-meta').innerHTML=level.meta+'<small>/60</small>';
   document.getElementById('pc-gap').textContent='+'+(level.meta-score);
   document.getElementById('pc-nivel').textContent=level.name;
   document.getElementById('prop-date').textContent='Gerado em '+now;
-
-  document.getElementById('pp-diag-desc').textContent=`Diagnóstico realizado por ${leadData.nome} (${leadData.cargo}, ${leadData.empresa}). Score obtido: ${score}/60 — ${level.name}. ${level.desc}`;
-
-  document.getElementById('pp-pills').innerHTML=pillars.map(p=>`
-    <span class="dpill ${p.cls}">${p.name}: ${p.score}/${p.max}</span>`).join('');
-
+  document.getElementById('pp-diag-desc').textContent='Diagnóstico realizado por '+leadData.nome+' ('+leadData.cargo+', '+leadData.empresa+'). Score obtido: '+score+'/60 — '+level.name+'. '+level.desc;
+  var pillsHtml='';
+  for(var j=0;j<pillars.length;j++){
+    var p=pillars[j];
+    pillsHtml+='<span class="dpill '+p.cls+'">'+p.name+': '+p.score+'/'+p.max+'</span>';
+  }
+  document.getElementById('pp-pills').innerHTML=pillsHtml;
+  var nextLevel=LEVELS[Math.min(LEVELS.indexOf(level)+1,LEVELS.length-1)];
   document.getElementById('rm-nivel-atual').textContent=level.name;
-  const nextLevel=LEVELS[Math.min(LEVELS.indexOf(level)+1,LEVELS.length-1)];
   document.getElementById('rm-nivel-meta').textContent=nextLevel.name;
   document.getElementById('rm-meta-score').textContent=level.meta;
-
-  // Gaps priorizados pelos menores scores
-  const gapsSorted=[...GAP_DATA].sort((a,b)=>getPhaseScore(a.phase)-getPhaseScore(b.phase));
-  document.getElementById('pp-gaps').innerHTML=gapsSorted.map(g=>`
-    <div class="gap-item">
-      <div class="gi-dot" style="background:${g.alta?'var(--red)':'var(--amber)'}"></div>
-      <div class="gi-body">
-        <div class="gi-title">${g.pilar} <span class="gi-badge ${g.alta?'alta':'media'}">${g.alta?'Alta':'Média'}</span></div>
-        <div class="gi-desc">${g.gap}</div>
-      </div>
-    </div>`).join('');
+  var sorted=[].concat(GAP_DATA).sort(function(a,b){return getPhaseScore(a.phase)-getPhaseScore(b.phase);});
+  var gapsHtml='';
+  for(var k=0;k<sorted.length;k++){
+    var g=sorted[k];
+    gapsHtml+='<div class="gap-item">'
+      +'<div class="gi-dot" style="background:'+(g.alta?'var(--red)':'var(--amber)')+'"></div>'
+      +'<div><div class="gi-title">'+g.pilar+' <span class="gi-badge '+(g.alta?'alta':'media')+'">'+(g.alta?'Alta':'Média')+'</span></div>'
+      +'<div class="gi-desc">'+g.gap+'</div></div>'
+      +'</div>';
+  }
+  document.getElementById('pp-gaps').innerHTML=gapsHtml;
 }
 
 function restartAll(){
   answers=new Array(QUESTIONS.length).fill(null);
-  current=0;
-  leadData={};
+  current=0;leadData={};
   document.getElementById('proposta-view').style.display='none';
   document.getElementById('lead-view').style.display='none';
   document.getElementById('hero-section').style.display='block';
   document.getElementById('assessment-view').style.display='block';
   document.getElementById('nav-badge').textContent='Assessment CTEM';
   document.getElementById('success-msg').classList.remove('show');
-  document.getElementById('submit-btn').disabled=false;
-  document.getElementById('submit-btn').textContent='Ver minha proposta personalizada →';
-  renderQ();
-  window.scrollTo({top:0,behavior:'smooth'});
+  var btn=document.getElementById('submit-btn');
+  btn.disabled=false;btn.textContent='Ver minha proposta personalizada \u2192';
+  renderQ();window.scrollTo(0,0);
 }
 
-renderQ();
+// Inicializa após DOM pronto
+document.addEventListener('DOMContentLoaded',function(){renderQ();});
 </script>
 </body>
 </html>
